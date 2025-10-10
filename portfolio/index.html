@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohith Chelimilla | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h5 {
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background: #111;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      color: #ffc107 !important;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    .navbar .nav-link {
+      color: #ccc !important;
+      margin-left: 15px;
+      transition: 0.3s;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: #ffc107 !important;
+    }
+
+    /* ===== HERO SECTION ===== */
+    #home {
+      color: #fff;
+      background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+      padding: 0;
+    }
+
+    .profile-wrapper {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .profile-wrapper:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #home h1 {
+      font-size: 2.2rem;
+      margin-top: 20px;
+    }
+
+    #home span {
+      color: #ffc107;
+    }
+
+    #home .btn {
+      font-weight: 500;
+      padding: 10px 25px;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-card h2 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    /* ===== PROJECTS ===== */
+    .project {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project .btn {
+      background-color: #111;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    .project .btn:hover {
+      background-color: #ffc107;
+      color: #111;
+    }
+
+    /* ===== EDUCATION ===== */
+    .education-item {
+      background: #fafafa;
+      padding: 20px;
+      border-left: 5px solid #ffc107;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* ===== CONTACT ===== */
+    form input, form textarea {
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: 0.3s;
+    }
+
+    form input:focus, form textarea:focus {
+      border-color: #ffc107;
+      box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+    }
+
+    form .btn {
+      background-color: #111;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    form .btn:hover {
+      background-color: #ffc107;
+      color: #111;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 20px 0;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #ffc107;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      #home h1 {
+        font-size: 1.8rem;
+      }
+
+      .about-card {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Rohith Chelimilla</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / HOME SECTION ===== -->
+  <section id="home" class="text-center">
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 100vh;">
+      <div class="profile-wrapper mb-4">
+        <img src="images/profile.jpg" alt="Rohith Chelimilla" class="profile-photo">
+      </div>
+      <h1>Hi, I'm <span>Rohith Chelimilla</span></h1>
+      <p class="lead">Aspiring Software Engineer | AWS Certified Cloud Practitioner</p>
+      <a href="#about" class="btn btn-warning mt-3">Know More</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-card">
+        <h2>About Me</h2>
+        <p>I am <strong>Rohith Chelimilla</strong>, an aspiring Software Engineer passionate about AI, Cloud Computing, and Development. Currently studying Computer Science Engineering at Geethanjali College of Engineering and Technology, with skills in Python, Java, C, and AWS Cloud.</p>
+        <p>As an <strong>AWS Certified Cloud Practitioner</strong> and participant in the Google AI-ML Virtual Internship, I’ve gained hands-on experience in AI modeling and cloud solutions.</p>
+        <p>I love problem-solving, coding, and teamwork. My goal is to build meaningful solutions while growing as a developer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="text-center mb-4">My Projects</h2>
+      <div class="row g-4">
+        <!-- Project Cards -->
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">Voice Assistant for Desktop</h5>
+              <p class="card-text">A desktop voice assistant using Python.</p>
+              <a href="https://github.com/chelimillarohith/Voice-assistant-for-desktop-virtual-desktop-assistant-ROVAA-" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">LegalAdvisorBot</h5>
+              <p class="card-text">AI Powered Courtroom Simulation and Judgment System.</p>
+              <a href="https://github.com/chelimillarohith/LegalAdvisorBot-AI-Powered-Courtroom-Simulation-and-Judgment-System" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">Gesture Controlled Media Player</h5>
+              <p class="card-text">Gesture Controlled Media Player using Computer Vision and Mediapipe.</p>
+              <a href="https://github.com/chelimillarohith/Gesture-Controlled-Media-Player-Using-Computer-Vision-and-Mediapipe" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">Biometric-Based ATM Security System</h5>
+              <p class="card-text">Enhancing ATM security using fingerprint biometric authentication and AES encryption.</p>
+              <a href="https://github.com/chelimillarohith/-Biometric-Based-ATM-Security-System" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">Mobile Price Prediction</h5>
+              <p class="card-text">Machine learning model to predict mobile prices with ~91% accuracy.</p>
+              <a href="https://github.com/chelimillarohith/mobile-price-prediction" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project h-100">
+            <div class="card-body">
+              <h5 class="card-title">Real-Time Speech Translation & TTS</h5>
+              <p class="card-text">Voice assistant for websites, music, time/date, and weather updates.</p>
+              <a href="https://github.com/chelimillarohith/Real-Time-Speech-Translation-and-Text-to-SpeechSystem" class="btn btn-dark" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education">
+    <div class="container">
+      <h2 class="text-center mb-4">Education</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="education-item">
+            <h3>Geethanjali College of Engineering and Technology</h3>
+            <p>B.Tech in Computer Science and Engineering | Expected Graduation: 2026</p>
+            <p>CGPA: 7.96</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="education-item">
+            <h3>Narayana Group of Educational Institutions</h3>
+            <p>Intermediate in MPC | 2020 - 2022</p>
+            <p>Percentage: 91.3%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <div class="about-card mx-auto" style="max-width: 600px;">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn w-100">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="text-center">
+    <p>© 2025 Rohith Chelimilla |
+      <a href="https://github.com/chelimillarohith" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/rohith-chelimilla-9b45922a7/" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
