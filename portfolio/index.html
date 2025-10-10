@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +11,11 @@
     /* ===== GENERAL STYLES ===== */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f4f4f9;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      color: #333;
     }
 
     h1, h2, h3, h5 {
@@ -22,182 +24,180 @@
 
     p {
       font-size: 1rem;
-      color: #333;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     section {
-      padding: 60px 0;
+      padding: 80px 0;
     }
 
     /* ===== NAVBAR ===== */
     .navbar {
-      background: #111;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar-brand {
-      color: #ffc107 !important;
-      font-weight: 600;
-      font-size: 1.3rem;
-    }
-
-    .navbar .nav-link {
-      color: #ccc !important;
-      margin-left: 15px;
+      background: #0d0d0d;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       transition: 0.3s;
     }
-
+    .navbar:hover { background: #111; }
+    .navbar-brand {
+      color: #ffbf00 !important;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .navbar .nav-link {
+      color: #ddd !important;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
     .navbar .nav-link:hover,
     .navbar .nav-link.active {
-      color: #ffc107 !important;
+      color: #ffbf00 !important;
+      font-weight: 500;
     }
 
     /* ===== HERO SECTION ===== */
     #home {
       color: #fff;
-      background: linear-gradient(to right, #0a0a0a, #1a1a1a);
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
       padding: 0;
     }
 
     .profile-wrapper {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
-
     .profile-wrapper:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     }
-
     .profile-photo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
     }
 
     #home h1 {
-      font-size: 2.2rem;
-      margin-top: 20px;
+      font-size: 2.5rem;
+      margin-top: 25px;
     }
-
-    #home span {
-      color: #ffc107;
+    #home span { color: #ffbf00; }
+    #home .lead {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
-
     #home .btn {
-      font-weight: 500;
-      padding: 10px 25px;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ffbf00, #ff8c00);
+      border: none;
+      color: #111;
+      transition: all 0.4s ease;
+    }
+    #home .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
     /* ===== ABOUT SECTION ===== */
     .about-card {
       background: #fff;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
-    .about-card h2 {
-      color: #222;
-      margin-bottom: 20px;
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     }
+    .about-card h2 { color: #222; margin-bottom: 25px; }
 
     /* ===== PROJECTS ===== */
     .project {
       background: #fff;
       border: none;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      padding: 20px;
       transition: all 0.3s ease-in-out;
     }
-
     .project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
-
     .project .btn {
-      background-color: #111;
-      color: #fff;
-      transition: background 0.3s;
+      background: linear-gradient(45deg, #0f2027, #203a43);
+      color: #ffbf00;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
-
     .project .btn:hover {
-      background-color: #ffc107;
+      background: #ffbf00;
       color: #111;
+      transform: scale(1.05);
     }
 
     /* ===== EDUCATION ===== */
     .education-item {
       background: #fafafa;
-      padding: 20px;
-      border-left: 5px solid #ffc107;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
+      padding: 25px;
+      border-left: 6px solid #ffbf00;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
     }
-
     .education-item:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     /* ===== CONTACT ===== */
     form input, form textarea {
-      border-radius: 8px;
+      border-radius: 12px;
       border: 1px solid #ccc;
+      padding: 10px;
       transition: 0.3s;
     }
-
     form input:focus, form textarea:focus {
-      border-color: #ffc107;
-      box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+      border-color: #ffbf00;
+      box-shadow: 0 0 10px rgba(255,191,0,0.3);
     }
-
     form .btn {
-      background-color: #111;
-      color: #fff;
-      transition: 0.3s;
+      background: linear-gradient(45deg, #0f2027, #203a43);
+      color: #ffbf00;
+      border-radius: 50px;
+      font-weight: 600;
     }
-
     form .btn:hover {
-      background-color: #ffc107;
+      background: #ffbf00;
       color: #111;
+      transform: scale(1.05);
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background: #111;
-      color: #ccc;
-      padding: 20px 0;
+      background: #0d0d0d;
+      color: #ddd;
+      padding: 25px 0;
       font-size: 0.95rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     }
-
     footer a {
-      color: #ffc107;
+      color: #ffbf00;
       text-decoration: none;
       transition: color 0.3s;
     }
-
-    footer a:hover {
-      color: #fff;
-    }
+    footer a:hover { color: #fff; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      #home h1 {
-        font-size: 1.8rem;
-      }
-
-      .about-card {
-        padding: 25px;
-      }
+      #home h1 { font-size: 2rem; }
+      .about-card { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -230,7 +230,7 @@
       </div>
       <h1>Hi, I'm <span>Rohith Chelimilla</span></h1>
       <p class="lead">Aspiring Software Engineer | AWS Certified Cloud Practitioner</p>
-      <a href="#about" class="btn btn-warning mt-3">Know More</a>
+      <a href="#about" class="btn mt-3">Know More</a>
     </div>
   </section>
 
@@ -239,9 +239,33 @@
     <div class="container">
       <div class="about-card">
         <h2>About Me</h2>
-        <p>I am <strong>Rohith Chelimilla</strong>, an aspiring Software Engineer passionate about AI, Cloud Computing, and Development. Currently studying Computer Science Engineering at Geethanjali College of Engineering and Technology, with skills in Python, Java, C, and AWS Cloud.</p>
-        <p>As an <strong>AWS Certified Cloud Practitioner</strong> and participant in the Google AI-ML Virtual Internship, I’ve gained hands-on experience in AI modeling and cloud solutions.</p>
-        <p>I love problem-solving, coding, and teamwork. My goal is to build meaningful solutions while growing as a developer.</p>
+        <p>
+      I’m <strong>Rohith Chelimilla</strong>, an aspiring Software Engineer passionate about 
+      <strong>Artificial Intelligence, Cloud Computing, and Software Development</strong>. 
+      Currently pursuing my Bachelor's in Computer Science Engineering at 
+      <strong>Geethanjali College of Engineering and Technology</strong>, I have built a strong 
+      foundation in <strong>Python, Java, C</strong>, and <strong>AWS Cloud fundamentals</strong>. 
+      My curiosity drives me to explore new technologies and create solutions that make an impact.
+    </p>
+    <p>
+      I’ve worked on projects ranging from <strong>AI-powered applications like LegalAdvisorBot, 
+      to Voice Assistants and Gesture-Controlled Media Players</strong>, which combine 
+      <strong>Machine Learning, Computer Vision, and intuitive user interactions</strong>. 
+      My passion lies in <strong>solving challenging problems, building innovative applications, 
+      and continuously learning emerging technologies</strong>.
+    </p>
+    <p>
+      As an <strong>AWS Certified Cloud Practitioner</strong> and participant in the 
+      <strong>Google AI-ML Virtual Internship</strong>, I have deepened my understanding of 
+      AI model development, cloud computing, and data-driven problem-solving. Alongside technical 
+      expertise, I value <strong>problem-solving, critical thinking, and teamwork</strong>, thriving 
+      in collaborative environments.
+    </p>
+    <p>
+      I actively participate in <strong>coding competitions and hackathons</strong>, constantly seeking 
+      challenges that push my boundaries. My goal is to leverage my skills to contribute to innovative 
+      technology solutions, grow as a developer, and build impactful applications.
+    </p>
       </div>
     </div>
   </section>
@@ -257,7 +281,7 @@
             <div class="card-body">
               <h5 class="card-title">Voice Assistant for Desktop</h5>
               <p class="card-text">A desktop voice assistant using Python.</p>
-              <a href="https://github.com/chelimillarohith/Voice-assistant-for-desktop-virtual-desktop-assistant-ROVAA-" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/Voice-assistant-for-desktop-virtual-desktop-assistant-ROVAA-" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -266,7 +290,7 @@
             <div class="card-body">
               <h5 class="card-title">LegalAdvisorBot</h5>
               <p class="card-text">AI Powered Courtroom Simulation and Judgment System.</p>
-              <a href="https://github.com/chelimillarohith/LegalAdvisorBot-AI-Powered-Courtroom-Simulation-and-Judgment-System" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/LegalAdvisorBot-AI-Powered-Courtroom-Simulation-and-Judgment-System" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -275,7 +299,7 @@
             <div class="card-body">
               <h5 class="card-title">Gesture Controlled Media Player</h5>
               <p class="card-text">Gesture Controlled Media Player using Computer Vision and Mediapipe.</p>
-              <a href="https://github.com/chelimillarohith/Gesture-Controlled-Media-Player-Using-Computer-Vision-and-Mediapipe" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/Gesture-Controlled-Media-Player-Using-Computer-Vision-and-Mediapipe" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -284,7 +308,7 @@
             <div class="card-body">
               <h5 class="card-title">Biometric-Based ATM Security System</h5>
               <p class="card-text">Enhancing ATM security using fingerprint biometric authentication and AES encryption.</p>
-              <a href="https://github.com/chelimillarohith/-Biometric-Based-ATM-Security-System" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/-Biometric-Based-ATM-Security-System" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -293,7 +317,7 @@
             <div class="card-body">
               <h5 class="card-title">Mobile Price Prediction</h5>
               <p class="card-text">Machine learning model to predict mobile prices with ~91% accuracy.</p>
-              <a href="https://github.com/chelimillarohith/mobile-price-prediction" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/mobile-price-prediction" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
@@ -302,7 +326,7 @@
             <div class="card-body">
               <h5 class="card-title">Real-Time Speech Translation & TTS</h5>
               <p class="card-text">Voice assistant for websites, music, time/date, and weather updates.</p>
-              <a href="https://github.com/chelimillarohith/Real-Time-Speech-Translation-and-Text-to-SpeechSystem" class="btn btn-dark" target="_blank">GitHub</a>
+              <a href="https://github.com/chelimillarohith/Real-Time-Speech-Translation-and-Text-to-SpeechSystem" class="btn" target="_blank">GitHub</a>
             </div>
           </div>
         </div>
